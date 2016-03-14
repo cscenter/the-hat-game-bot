@@ -1,0 +1,1 @@
+mystem -nlid --eng-gr all.txt | sed 's/\([а-я]*\)=\([A-Z]*\).*$/\1_\2/' | sed 's/\(.*\)??/\1_?/' > all_stemmed.txt
