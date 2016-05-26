@@ -1,9 +1,10 @@
-from built_dict import build_dict
+import json
+import logging
+import random
 
 import telegram
-import json
-import random
-import logging
+
+from built_dict import build_dict
 
 TOKEN = '173396560:AAH6D6_z-Dik1HFmFNM2PktTkrahDSyMurY'
 
