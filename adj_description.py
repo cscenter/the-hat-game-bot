@@ -6,7 +6,6 @@ import pymorphy2
 morph = pymorphy2.MorphAnalyzer()
 
 text = open('data/all_mid_utf8_stemmed.txt', 'r').read()
-#text = open('data/small_text_stemmed.txt', 'r').read()
 
 tokens = WordPunctTokenizer().tokenize(text)
 
@@ -80,6 +79,3 @@ def get_description(word):
 
     result = top.sort_values(['temp'], ascending=False)['fst'].values.tolist()
     return list(map(lambda x: inflect(x[:-2], word), filter(lambda x: x[-2:] == '_A', result)))
-
-
-print(get_description('шляпа'))
